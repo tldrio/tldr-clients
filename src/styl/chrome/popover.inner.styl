@@ -1,0 +1,131 @@
+@import 'nib'
+
+[class^="icon-"], [class*=" icon-"]
+  background-image url(../img/glyphicons-halflings.png)
+.icon-stop
+  background-position -312px -72px
+
+body
+  background-color transparent
+
+.tldr-read-container, .pow-container
+  width 550px
+  padding 0px 15px
+
+.tldr-main > .login-form-container
+  padding 15px 15px 0px
+
+.tldr-popover
+  .nav-container
+    margin-right 7px
+    .row-fluid
+      margin-top 5px
+  &:hover
+    .sub-tldr, .nav-container
+      opacity 1
+
+.n, .s, .e, .w, .nw, .ne, .se, .sw
+  border 1px solid #ccc
+  border 1px solid rgba(0, 0, 0, 0.2)
+  border-radius 6px
+  box-shadow 0 5px 10px rgba(0, 0, 0, 0.2)
+  background-clip padding-box
+  background-color white
+  position relative
+  top 11px
+  width 100%
+  &:before, &:after
+    content ""
+    position absolute
+
+.n, .s
+  left 11px
+  &:before
+    border-right 10px solid transparent
+    border-left 10px solid transparent
+    left 50%
+    margin-left -10px
+  &:after
+    z-index -1
+    border-right 11px solid transparent
+    border-left 11px solid transparent
+    left 50%
+    margin-left -11px
+.e, .w
+  &:before
+    border-top 10px solid transparent
+    border-bottom 10px solid transparent
+    top 50%
+    margin-top -10px
+  &:after
+    z-index -1
+    border-top 11px solid transparent
+    border-bottom 11px solid transparent
+    top 50%
+    margin-top -11px
+
+.n
+  &:before
+    border-top 10px solid white
+    bottom -10px
+  &:after
+    border-top 11px solid rgba(0, 0, 0, 0.2)
+    bottom -11px
+.s
+  &:before
+    border-bottom 10px solid white
+    top -10px
+  &:after
+    border-bottom 11px solid rgba(0, 0, 0, 0.2)
+    top -11px
+.e
+  left 11px
+  &:before
+    border-right 10px solid white
+    left -10px
+  &:after
+    border-right 11px solid rgba(0, 0, 0, 0.2)
+    left -11px
+.w
+  &:before
+    border-left 10px solid white
+    right -10px
+  &:after
+    border-left 11px solid rgba(0, 0, 0, 0.2)
+    right -11px
+
+.ne, .se
+  &:before
+    border-right 10px solid transparent
+    border-left 1px solid transparent
+    left 10px
+  &:after
+    z-index -1
+    border-right 11px solid transparent
+    border-left 2px solid transparent
+    left 9px
+.nw, .sw
+  left 11px
+  &:before
+    border-left 10px solid transparent
+    border-right 1px solid transparent
+    right 10px
+  &:after
+    z-index -1
+    border-left 11px solid transparent
+    border-right 2px solid transparent
+    right 9px
+.ne, .nw
+  &:before
+    border-top 10px solid white
+    bottom -10px
+  &:after
+    border-top 10px solid rgba(0, 0, 0, 0.2)
+    bottom -11px
+.se, .sw
+  &:before
+    border-bottom 10px solid white
+    top -10px
+  &:after
+    border-bottom 11px solid rgba(0, 0, 0, 0.2)
+    top -11px

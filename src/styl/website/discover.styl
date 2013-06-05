@@ -1,0 +1,157 @@
+body
+  height 100%
+
+.main-container
+  height 100%
+  background-color rgba(255, 255, 255, 0.6);
+  .nav, .tab-content
+    margin-top 20px
+
+.discover-feed-column
+  margin-left auto
+  margin-right auto
+
+.discover-feed-container
+  padding-top 5px
+  padding-bottom 5px
+  background white
+  border 1px solid #e5e5e5
+  border-radius 6px
+
+.discover-load-more
+  padding 5px 0
+  text-align center
+
+.discover-feed-options
+  padding 5px 25px
+  .options
+    display inline-block
+.option-chosen
+  color black
+  font-weight bold
+.options-lang
+  margin-top 20px
+  margin-left auto
+  margin-right auto
+  width 100px
+.options-follow
+  margin-top 10px
+  p
+    text-align center
+    color #777
+  .subscribe-medium
+    margin-left 40px
+    .fb-like
+      overflow hidden
+      width 50px
+      margin-top 2px
+    .latest-rss-feed-link
+      font-size 12px
+
+
+.discover-tldr-header
+  cursor pointer
+  overflow hidden
+  padding 20px 25px
+
+.discover-tldr-foldable
+  padding 0 25px
+
+.discover-tldr-item
+  padding 0
+  border-top 1px solid #e5e5e5
+  &.collapsed
+    &:hover
+      background #f5f5f5
+      .discover-tldr-header
+        border-left solid 3px #d5d5d5
+    .discover-tldr-foldable
+      display none
+  &:nth-child(n+11)
+    display none
+  &:last-child
+    border-bottom 1px solid #e5e5e5
+
+.media
+  margin 0
+
+/* tldr styling in discover */
+.discover-tldr-list
+  margin 0
+  padding-bottom 5px
+  .tldr-stats
+    opacity 0.7
+  .discover-tldr-image
+    width 130px
+    height 76px
+  .discover-tldr-summary
+    padding-bottom 20px
+    ul
+      list-style none
+      margin 0
+    .discover-tldr-bullet
+      line-height 20px
+      font-size 15px
+      &:nth-child(n+2)
+        margin-top 11px
+  .tldr-actions
+    margin-left -12px
+    .btn
+      font-weight normal
+
+.topic-link:not(:last-child):after
+  content ","
+
+/* Topics list styling
+-------------------------------------------------- */
+
+.topics-list-column
+  width 211px
+  hr.soften
+    margin 20px 0
+
+.topics-list
+  width 160px
+  margin-left 20px
+  padding 0
+  background-color #fff
+  box-shadow 0 1px 4px rgba(0,0,0,.065)
+  border-radius 6px
+
+.topics-list > li > a
+  display block
+  width 190px \9
+  margin 0 0 -1px
+  padding 8px 14px
+  border 1px solid #e5e5e5
+
+.topics-list > li:first-child > a
+  border-radius 6px 6px 0 0
+.topics-list > li:last-child > a
+  border-radius 0 0 6px 6px
+
+.topics-list > .active > a
+  position relative
+  z-index 2
+  padding 9px 15px
+  border 0
+  text-shadow 0 1px 0 rgba(0,0,0,.15)
+  box-shadow inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1)
+
+/* Chevrons */
+.topics-list .icon-chevron-right
+  float right
+  margin-top 2px
+  margin-right -6px
+  opacity .25
+
+.topics-list > li > a:hover
+  background-color #f5f5f5
+
+.topics-list a:hover .icon-chevron-right
+  opacity .5
+
+.topics-list .active .icon-chevron-right,
+.topics-list .active a:hover .icon-chevron-right
+  opacity 1
+

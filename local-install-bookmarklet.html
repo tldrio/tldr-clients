@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Bookmarklets</title>
+    </head>
+
+    <body>
+
+
+      <!--
+          We fetch here a script that contains all the logic and brute 
+          insert it in the DOM
+          We use a query string with random parameters to force the browser to reload the script-->
+
+          <a href="javascript:(function(){ try { window.TLDR_D4A6EBE3.launch(); }catch(e){ var head=document.getElementsByTagName('head')[0], script=document.createElement('script');script.type='text/javascript'; script.src='//localhost:8888/bookmarklet/src/bookmarklet.js'; script.async=true; head.appendChild(script);}})(); void 0">Tldr-Local</a>
+
+      <br><br><br>STAGING :
+  <a draggable="true" class="btn animation-running" id="install-bm-btn" href="javascript:(function(){try{window.TLDR_D4A6EBE3.launch();}catch(e){ var head=document.getElementsByTagName('head')[0],script=document.createElement('script');script.type='text/javascript';script.src='//staging.tldr.io/bookmarklet/src/bookmarklet.js';script.async=true;head.appendChild(script);}})();void 0">◼ tl;dr</a>
+
+      <br><br><br>Embed
+      <a draggable="true"  href="javascript:(function(){
+        function injectEmbed (id) {
+        var head=document.getElementsByTagName('head')[0]
+        ,script=document.createElement('script')
+        ,blockquote=document.createElement('blockquote');
+        blockquote.className='tldr-embed-widget';
+        blockquote.setAttribute('data-use-own-tldr', 'true');
+        script.type='text/javascript';
+        script.src='//tldr.io/embed/widget-embed.js';
+        script.async=true;
+        document.body.insertBefore(blockquote, document.body.firstChild);
+        head.appendChild(script);}
+        injectEmbed();
+        })()
+        ;void 0">injectEmbed</a>
+
+    </body>
+</html>

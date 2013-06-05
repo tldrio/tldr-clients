@@ -1,0 +1,82 @@
+@import 'nib'
+
+/* tldr
+-------------------------------------------------- */
+.tldr-read-container
+  &:hover
+    .sub-tldr
+      opacity 1
+
+.tldr-tldr
+  padding-left 20px
+
+.tldr-metadata
+  color #666
+  font-size 12px
+  font-weight 300
+  line-height 18px
+  .category-name:not(:last-child):after
+    content ","
+
+.tldr-bullet
+  font-size 15px
+  line-height 20px
+  margin-top 11px
+
+.tldr-summary
+  margin-top 14px
+  ul
+    list-style none
+    margin 0
+
+.tldr-favicon
+  width 16px
+  height 16px
+  vertical-align baseline
+.tldr-favicon-ellipsis
+  float left
+  margin-top 3px
+  margin-right 5px
+
+.tldr-header
+  line-height 22px
+
+.tldr-title
+  font-size 17px
+  font-weight bold
+  a
+    color black
+    &:hover
+      text-decoration none
+      color #666
+
+.tldr-page-title
+  line-height 22px
+  display inline
+
+.tldr-title-ellipsis
+  max-width 439px
+  text-overflow ellipsis
+  overflow hidden
+  white-space nowrap
+  margin-bottom 0
+
+.tldr-hostname
+  font-size 11px
+  font-weight normal
+
+.sub-tldr
+  opacity 0
+  text-align center
+  margin-top 6px
+  button.btn-link
+    font-size 12px
+  #read-full-article
+    font-size 12px
+    margin-right 10px
+
+.tldr-image
+  float left
+  max-width 250px
+  margin-right 18px
+  margin-top 18px

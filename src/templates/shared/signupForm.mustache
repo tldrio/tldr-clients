@@ -1,0 +1,47 @@
+<header class="marketing">
+  <h1>Join us</h1>
+  <p class="marketing-byline">Be somebody on tl;dr and gain the ability to contribute!</p>
+</header>
+
+{{>flash}}
+<form id="signup-form" class="form-horizontal" target="#">
+  <fieldset>
+    <div class="control-group">
+      <label class="control-label" for="signup-form-username">Pick a username</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" name="username" id="signup-form-username" value="{{username}}">
+        <span class="help-inline"></span>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="signup-form-email">Enter your email</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" name="email" id="signup-form-email" value="{{email}}">
+        <span class="help-inline"></span>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="signup-form-password">Choose a password</label>
+      <div class="controls">
+        <input type="password" class="input-xlarge" name="password" id="signup-form-password" value="{{password}}">
+        <span class="help-inline"></span>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <div class="controls">
+        <input type="submit" value="Submit" class="btn btn-primary" id="signup-form-submit">
+      </div>
+    </div>
+    {{#returnUrl}}
+    <div class="control-group">
+      <div class="controls">
+        <a href="/login?warning=false{{returnUrl}}">Already a member? Log in here</a>
+      </div>
+    </div>
+    {{/returnUrl}}
+
+  </fieldset>
+</form>

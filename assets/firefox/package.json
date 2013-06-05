@@ -1,0 +1,35 @@
+{
+  "name": "tldrio",
+  "author": "tldr.io",
+  "version": "2.2.0",
+  "fullName": "tl;dr by tldr.io",
+  "id": "jid1-6IfEB1Y3aAiHyQ",
+  "description": "Discover, read and contribute human written summaries of Web pages. Save time, focus on what matters, stop opening too many tabs.",
+  "preferences":[
+    {
+      "name": "checkTldr",
+      "title": "Check the existence of a tl;dr for a page",
+      "description": "Set the badge in the url bar to indicate if there is a tl;dr available or not for the current page",
+      "type": "bool",
+      "value": true
+    }
+   ,{
+      "name": "injectEmbed",
+      "title": "Inline tl;drs in Hacker News and Reddit comments page",
+      "description": "Display the tl;dr if it exists and a form to submit one otherwise.",
+      "type": "bool",
+      "value": true
+    }
+   ,{
+      "name": "injectPreviews",
+      "title": "Display a preview of Wikipedia entries.",
+      "description": "Display a preview of Wikipedia entries.",
+      "type": "bool",
+      "value": true
+    }
+  ],
+  "dependencies": [
+        "urlbarbutton",
+        "showforpage"
+      ]
+}

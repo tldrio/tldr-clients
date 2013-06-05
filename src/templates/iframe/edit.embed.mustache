@@ -1,0 +1,76 @@
+
+{{#thirdPartyCookiesEnabled}}
+<span class="tldr-header">
+  <span class="tldr-brand">tl;dr</span> | for a better discussion, fill in a summary of the submission <span class="provider">(via <a href="http://tldr.io" target="_blank">tldr.io</a>)</span>
+  <span class="embed-actions">
+    <button type="button" class="close dismiss-iframe">×</button>
+    <a href="#" class="go-to-settings"><i class="icon-wrench"></i></a>
+  </span>
+</span>
+<form class="form-inline">
+  <div>
+    {{#summaryBullets}}
+    <div class="row-fluid control-group edit-bullet-container">
+      <span class="edit-bullet-icon">-</span>
+      <div class="edit-bullet-wrapper">
+        <div class="expandingArea active">
+      <pre><span>{{.}}</span><br></pre>
+        <textarea class="edit-bullet" placeholder="Add a key point from the article">{{.}}</textarea>
+      </div>
+    </div>
+    <div class="trash-bullet-icon">
+      <div class="character-count">{{characterCount}}/{{maxBulletLength}}</div>
+      <button class="close edit-delete-bullet" tabindex="-1">
+        x
+      </button>
+    </div>
+  </div>
+  {{/summaryBullets}}
+  {{>bullet}}
+</div>
+  <div class="control-group select-topic">
+    <label class="control-label">Select a Topic</label>
+    <div class="controls">
+      <select>
+        <option></option>
+        <option>Art</option>
+        <option>Business</option>
+        <option>Design</option>
+        <option>Education</option>
+        <option>Gaming</option>
+        <option>Health</option>
+        <option>Internet</option>
+        <option>Politics</option>
+        <option>Programming</option>
+        <option>Science</option>
+        <option>Startups</option>
+        <option>World News</option>
+      </select>
+      <span class="help-inline tldr-error-msg"></span>
+    </div>
+  </div>
+
+<div class="edit-controls">
+  <p class="edit-control-pre-save-info">
+
+    <input type="button" value="save" class="edit-control-save">
+    <!--User not logged in-->
+    {{^username}}
+    <a href="#" class="edit-control-login">Log in</a> to save.
+    {{/username}}
+    {{#username}}
+    {{#isNew}}
+    <label class="checkbox edit-control-save-anonymously">
+      <input type="checkbox"> Save Anonymously
+    </label>
+    {{/isNew}}
+    {{/username}}
+  </p>
+
+</div>
+</form>
+
+{{/thirdPartyCookiesEnabled}}
+{{^thirdPartyCookiesEnabled}}
+We're thrilled that you want to contribute but to do so we need you to enable your third party cookies. You can learn how to do it <a href="http://help.disqus.com/customer/portal/articles/466235-enabling-cookies" target="_blank">here</a>.
+{{/thirdPartyCookiesEnabled}}

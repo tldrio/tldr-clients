@@ -1,0 +1,26 @@
+<p>
+  It's easy! All you have to do is drag the "◼ tl;dr" button to your bookmarks bar.
+</p>
+<p class="install-bm-link-and-comment">
+  <a draggable="true" class="btn animation-running" id="install-bm-btn" href="javascript:(function(){try{window.TLDR_D4A6EBE3.launch();}catch(e){ var head=document.getElementsByTagName('head')[0],script=document.createElement('script');script.type='text/javascript';script.src='//tldr.io/bookmarklet/src/bookmarklet.js';script.async=true;head.appendChild(script);}})();void 0">▉ tl;dr</a>
+  <span id="install-bm-comment-action">
+    &lt;-- <em>Start dragging this button now!</em>
+  </span>
+</p>
+<p class="muted bookmarkbar-indication">
+  Don't see the bookmarks bar? In the menu, click on
+  {{#isFirefox}}
+    <strong>View &gt; Toolbars &gt; Bookmarks Toolbar</strong>
+  {{/isFirefox}}
+  {{^isFirefox}}
+    {{#onWindows}}
+      <strong>the chrome menu &gt; Bookmarks &gt; Show bookmarks bar</strong>
+    {{/onWindows}}
+    {{^onWindows}}
+      <strong>View &gt; Show Bookmarks Bar</strong>
+    {{/onWindows}}
+  {{/isFirefox}}
+</p>
+<img class="screenshot-install-bm" src="assets/img/screenInstallBM.png" alt="Drag the tldr.io button to your bookmarks bar">
+
+

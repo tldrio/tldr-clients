@@ -1,0 +1,29 @@
+{ "name": "tldr-clients"
+, "private": true
+, "version": "0.1.0"
+, "author": "tldr"
+, "contributors": [ "Stanislas Marion"
+                  , "Charles Miglietti"
+                  , "Louis Chatriot"
+                  ]
+, "description": "crowdsourced summaries"
+, "keywords": ["summary", "tldr"]
+, "homepage": "http://tldr.io"
+, "engines": { "node": "0.8.2", "npm": "1.1.42" }
+, "dependencies" : { "chai": "latest"
+                   , "grunt": "~0.3"
+                   , "grunt-context": "latest"
+                   , "grunt-contrib": "latest"
+                   , "grunt-growl": "0.1.2"
+                   , "hogan.js": "2.0.x"
+                   , "mocha": "~1.3"
+                   , "nib": "latest"
+                   , "requirejs": "2.0.x"
+                   , "stylus": "latest"
+                   , "underscore": "1.3.x"
+                   }
+, "licence":"Proprietary License"
+, "scripts": {
+    "test-grunt-tasks": "grunt --base ./grunt-tasks/test/ --config ./grunt-tasks/test/grunt.test.js"
+  }
+}

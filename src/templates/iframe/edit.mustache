@@ -1,0 +1,74 @@
+
+{{#thirdPartyCookiesEnabled}}
+<form class="form-horizontal" id="tldr-edit-form">
+  <div class="control-group">
+    <input data-tldr-role="title" id="edit-title" class="span8 edit-metadata" type="text" value="{{title}}" placeholder="Enter the title of this page here">
+    <span class="help-inline tldr-error-msg"></span>
+  </div>
+  {{>guidelines}}
+
+  <div>
+    {{#summaryBullets}}
+    <div class="row-fluid control-group edit-bullet-container">
+      <span class="span1 edit-bullet-icon"><i class="icon-stop"></i></span>
+      <div class="span10 edit-bullet-wrapper">
+        <div class="expandingArea active">
+          <pre><span>{{.}}</span><br></pre>
+          <textarea  class="span12 edit-bullet" placeholder="Add a key idea from this page">{{.}}</textarea>
+        </div>
+      </div>
+      <span class="span1 trash-bullet-icon">
+        <div class="character-count">{{characterCount}}/{{maxBulletLength}}</div>
+        <a class="btn btn-small edit-delete-bullet" href="#" tabindex="-1"><i class="icon-trash"></i></a>
+      </span>
+      <span class="help-block tldr-error-msg"></span>
+    </div>
+    {{/summaryBullets}}
+    {{>bullet}}
+  </div>
+  <div class="control-group select-topic">
+    <label class="control-label" for="topic">Select a Topic</label>
+    <div class="controls" id="topic">
+      <select>
+        <option></option>
+        {{#categories}}
+          <option>{{name}}</option>
+        {{/categories}}
+      </select>
+      <span class="help-inline tldr-error-msg"></span>
+    </div>
+  </div>
+
+
+  <div class="edit-controls">
+    <p class="edit-control-pre-save-info">
+
+      <!--User not logged in-->
+      {{^username}}
+      <a href="#" class="edit-control-login">Log in</a> to save.
+      {{/username}}
+
+      {{#firstContrib}}
+      <div class="first-contrib-component first-contrib-funny-message">
+        First times can be messy, don't sweat it!
+      </div>
+      {{/firstContrib}}
+
+    </p>
+    <input type="button" value="Save" class="btn btn-success edit-control-save">
+    or <a href="#" class="edit-control-cancel">Cancel</a>
+
+    {{#isNew}}
+    <label class="checkbox edit-control-save-anonymously">
+      <input type="checkbox" {{#anonymous}} checked="checked" {{/anonymous}}> Save Anonymously
+    </label>
+    {{/isNew}}
+
+  </div>
+</form>
+
+
+{{/thirdPartyCookiesEnabled}}
+{{^thirdPartyCookiesEnabled}}
+We're thrilled that you want to contribute but to do so we need you to enable your third party cookies. You can learn how to do it <a href="http://help.disqus.com/customer/portal/articles/466235-enabling-cookies" target="_blank">here</a>.
+{{/thirdPartyCookiesEnabled}}

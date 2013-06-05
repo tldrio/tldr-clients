@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>tldr.io settings</title>
+    <link rel="stylesheet" href="assets/css/settings.css">
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="settings">
+
+        <div class="alert alert-success">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          Settings saved!
+        </div>
+        <h2 class="settings-heading">Settings</h2>
+        <div class="row">
+          <p>
+            Don't check the existence of a tl;dr for the following websites
+          </p>
+          <textarea id="textarea-excluded-urls" rows="6"></textarea>
+          <div class="help muted"> e.g http*://trello.com/* <br> Enter one url per line.</div>
+        </div>
+
+        <div class="row">
+          <label class="checkbox">
+            Don't check the existence of a tl;dr on any webpage<input id="disable-check" type="checkbox"> 
+          </label>
+        </div>
+
+        <hr class="soften">
+
+        <div class="row">
+          <label class="checkbox">
+            Don't embed the tl;drs in Hacker News and Reddit comments pages<input id="disable-embed" type="checkbox">
+          </label>
+        </div>
+
+        <hr class="soften">
+
+        <div class="row">
+          <label class="checkbox">
+            Don't display the available summaries of webpages by hovering over the links that point to them<input id="disable-preview" type="checkbox">
+          </label>
+        </div>
+
+
+        <div class="row">
+          <button id="save-settings" class="btn btn-large btn-primary">Save</button>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="src/settings.js"> </script>
+  </body>
+</html>
+

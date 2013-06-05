@@ -1,0 +1,21 @@
+{{#invalidInput}}
+<li>
+  <div class="alert">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <small>{{invalidInput}}</small>
+  </div>
+</li>
+{{/invalidInput}}
+{{message}}
+<div class="login-form-container">
+  <form class="form-inline" id="login-form">
+    <input class="input-small" placeholder="Email" name="Email" type="text" id="login-form-email">
+    <input class="input-small" placeholder="Password" name="password" type="password" id="login-form-password">
+    <button type="submit" class="btn btn-primary" id="login-form-login">Log In</button> or <button id="auth-google" class="btn btn-primary">Login with Google</button>
+  </form>
+  <p>
+    <a href="#" id="login-form-cancel">Cancel</a><br>
+    <a href="{{env.websiteUrl}}/forgotPassword" target="_blank" class="forgot-password-link"><small>Forgot your password?</small></a>
+    | <a href="{{env.websiteUrl}}/signup"  id="login-form-signup"><small>No account? Create one now, you won't lose your work</small></a>
+  </p>
+</div>

@@ -1,0 +1,9 @@
+*.swp
+*.swo
+*~
+.DS_Store
+logs/
+dist/
+npm-debug.log
+tools/loginSwitch/install.html
+assets/firefox/profile

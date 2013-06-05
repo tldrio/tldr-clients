@@ -1,0 +1,367 @@
+@import 'nib'
+
+/* Jumbotrons
+-------------------------------------------------- */
+.jumbotron
+  margin-bottom 30px
+  text-align center
+  position relative
+  h1
+    font-size 54px
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height 1
+    margin-bottom 9px
+  p
+    font-weight: 300;
+    font-size 30px
+    line-height 36px
+    margin-bottom: 30px;
+  a:hover
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255,255,255,.25);
+
+/* Masthead
+------------------------- */
+.masthead {
+  padding: 25px 0 0px;
+  margin-bottom: 0;
+}
+.masthead h1 {
+  font-size: 63px;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+.masthead p {
+  font-size: 36px;
+  font-weight: 200;
+  line-height: 1.25;
+}
+
+/* call to action
+-------------------------------------------------- */
+.call-to-action
+  text-align center
+  .detail-extension
+    font-size: 12px;
+    margin-top: 6px;
+  .btn
+    margin-top 50px
+    padding: 8px 24px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff; /* redeclare to override the `.jumbotron a` */
+    border: 0;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25), 0 2px 10px rgba(0,68,204,.01);
+    animation blueGlow 1.5s infinite
+    transition none
+    &:active
+      box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
+
+.ie .call-to-action
+  display none !important
+
+.marketing-point-illustration
+  text-align center
+  img
+    height 100px
+
+.marketing-points
+  margin-top 70px
+
+.marketing-point
+  text-align center
+  .marketing-point-title
+    font-size 22px
+    font-weight bold
+  p
+    position relative
+    padding 12px
+    font-size 15px
+
+.marketing-point > p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 11.76471%;
+  left: 44.11765%;
+  border-top: 1px solid #aaa;
+}
+
+
+/* Vanity
+------------------------- */
+.vanity
+  text-align center
+  color #999
+  font-weight 700
+  font-size 20px
+  text-shadow 0px 1px 0px white
+
+/* pink numbers */
+.number
+  color #f60
+
+
+/* Featurettes
+------------------------- */
+
+.more-on-extension-container
+  margin-bottom 36px
+  .click-screenshot
+    padding-top 113px
+
+  .featurette-divider
+    margin: 80px 0 /* Space out the Bootstrap <hr> more */
+
+  .featurette
+    padding-top 47px /* Vertically center images part 1: add padding above and below text. */
+    overflow hidden /* Vertically center images part 2: clear their floats. */
+    padding-bottom 20px
+
+  .featurette-image
+    border-radius: 25px;
+    display: inline-block;
+    padding: 6px 24px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 126px;
+    text-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px;
+    font-size: 106px;
+    color: white;
+    margin-top: 4px;
+
+  /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+  .featurette-image.pull-left
+    margin-right 40px
+
+  .featurette-image.pull-right
+    margin-left 40px
+
+  /* Thin out the marketing headings */
+  .featurette-heading
+    font-size 50px
+    font-weight 300
+    line-height 1
+    letter-spacing -1px
+
+  .first-featurette
+    margin-left: 20px;
+  .second-featurette
+    margin-right: 20px;
+  .third-featurette
+    background-color: #999;
+    margin-left: 20px;
+  .tutorial-container
+      background white
+  .tutorial
+    text-align center
+    margin-top 35px
+    img
+      box-shadow 3px 3px 9px rgba(0,0,0,0.5)
+
+.social-media
+  background-color #fafafa
+  padding-bottom 15px
+  .media
+    padding-top 28px
+    text-align center
+    .logo
+      height 36px
+      vertical-align middle
+      margin 0px 15px
+    .logo-seedcamp
+      height 58px
+      margin-top -28px
+    .logo-rude-baguette
+      height 42px
+    .logo-gigaom
+      height 28px
+  .social
+    text-align center
+    margin-top 18px
+    .fb-like
+      overflow hidden
+      width 50px
+    .social-widget
+      margin 0px 15px
+      display inline-block
+
+.users-quotes
+  .right-col
+    margin-top 33px
+  .quote-embed
+    text-align: left;
+    width: 411px;
+    border-radius: 4px;
+    padding: 29px 18px 29px 27px;
+    margin-bottom: 40px;
+    background: #fafafa;
+    position: relative;
+    box-shadow: inset 0 1px #fff,0 1px 2px #ccc;
+    -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.3));
+    border none
+    &:nth-of-type(2)
+      margin-top 67px
+      margin-left 27px
+    &:after
+      content: "";
+      position: absolute;
+      bottom: -19px;
+      left: 50px;
+      border-width: 20px 0 0 20px;
+      border-style: solid;
+      border-color: #fafafa transparent;
+      display: block;
+      width: 0;
+    .quote-avatar
+      width 85px
+      height 85px
+      border-radius 5px
+      margin-right 18px
+    .quote-text
+      display inline-block
+      width 300px
+      vertical-align middle
+      p
+        font-size 18px
+    small
+      color #999
+
+
+
+
+/* Footer
+-------------------------------------------------- */
+.footer {
+  border-top: 1px solid #e5e5e5;
+  background-color: whitesmoke;
+  text-align center
+  padding 40px 0
+}
+.footer p {
+  margin-bottom: 0;
+  color: #777;
+}
+.footer-links {
+  margin: 10px 0;
+}
+.footer-links li {
+  display: inline;
+  margin-right: 10px;
+}
+
+/* Misc
+-------------------------------------------------- */
+/* Faded out hr */
+hr.soften
+  height: 1px;
+  margin: 54px 0;
+  background-image linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0))
+  border: 0;
+
+/* forgot password link in dropdown */
+.dropdown-menu a.forgot-password-link
+  padding 0
+  &:hover
+    background none
+    color black
+
+/* Login with Google */
+.login-with-google
+  margin-top 15px
+  color #000000
+  font-weight bold
+
+.login-with-google-button
+  margin-top 5px
+  width 100%
+  text-align left
+  position relative
+
+.login-with-google-spinner
+  position absolute
+  top 2px
+  right 30px
+
+.signup-with-google-button
+  width 100%
+  position relative
+
+.rss-feed-icon
+  height 18px
+  width 18px
+  margin-right 3px
+
+/* RSS feed link in latest-summaries */
+.latest-rss-feed-link
+  color #e46d27
+  &:hover
+    color #e46d27
+
+/* Your impact new badge */
+#your-impact-new-badge
+  position relative
+  top -2px
+
+.how-to-summarize
+  font-size 20px
+  margin-bottom 20px
+  margin-top 40px
+
+/* Graphic helpers
+-------------------------------------------------- */
+
+.graphic-helper
+  position absolute
+
+#extension-gh-hn
+  top 15px
+  left 551px
+
+/* Social buttons on Homepage
+-------------------------------------------------- */
+.social-fb-like
+  width 92px
+
+.social-twttr-tweet
+  width 82px
+  margin-left 20px
+
+/* What is it
+-------------------------------------------------- */
+.marketing
+  .install-bm-container
+    margin-left auto
+    margin-right auto
+
+.centered-button
+  max-width 200px
+  display block
+  margin 0 auto
+
+
+// Admin page
+.admin
+  .category
+    width 170px
+
+/* Embedded tldrs explanation page
+---------------------------------------------------*/
+.embed-screenshot
+  border-style solid
+  border-color #ccc
+  border-width 1px
+  margin-top 2px
+  margin-bottom 20px
+
+.anchor-before-h4-title
+  display block
+  position relative
+  top -50px
+
+.code-textarea
+  width 95%
+  overflow hidden
+  font-size 11px

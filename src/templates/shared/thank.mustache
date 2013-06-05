@@ -1,0 +1,12 @@
+<div class="btn-group">
+  {{#alreadyThanked}}
+    <button class="btn btn-link thank muted">
+      Sent Thanks
+    </button>
+  {{/alreadyThanked}}
+  {{^alreadyThanked}}
+  <button class="btn btn-link thank">
+    Thank contributor
+  </button>
+  {{/alreadyThanked}}
+</div>

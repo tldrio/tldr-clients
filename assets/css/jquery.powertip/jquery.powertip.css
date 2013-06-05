@@ -1,0 +1,108 @@
+/* PowerTip Plugin */
+#powerTip {
+	cursor: default;
+	border-radius: 6px;
+  color: black;
+	position: absolute;
+	z-index: 1010;
+  display: none;
+  width: 550px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
+}
+#powerTip.n:before, #powerTip.e:before, #powerTip.s:before, #powerTip.w:before,
+#powerTip.ne:before, #powerTip.nw:before, #powerTip.se:before, #powerTip.sw:before,
+#powerTip.n:after, #powerTip.e:after, #powerTip.s:after, #powerTip.w:after,
+#powerTip.ne:after, #powerTip.nw:after, #powerTip.se:after, #powerTip.sw:after {
+	content: "";
+	position: absolute;
+}
+#powerTip.n:after, #powerTip.e:after, #powerTip.s:after, #powerTip.w:after,
+#powerTip.ne:after, #powerTip.nw:after, #powerTip.se:after, #powerTip.sw:after {
+	z-index: -1;
+}
+#powerTip.n:before, #powerTip.s:before {
+	border-right: 10px solid transparent;
+	border-left: 10px solid transparent;
+	left: 20%;
+	margin-left: -10px;
+}
+#powerTip.e:before, #powerTip.w:before {
+	border-bottom: 10px solid transparent;
+	border-top: 10px solid transparent;
+	margin-top: -10px;
+	top: 50%;
+}
+#powerTip.n:before {
+	border-top: 10px solid white;
+	bottom: -10px;
+}
+#powerTip.e:before {
+	border-right: 10px solid white;
+	left: -10px;
+}
+#powerTip.s:before {
+	border-bottom: 10px solid white;
+	top: -10px;
+}
+#powerTip.w:before {
+	border-left: 10px solid white;
+	right: -10px;
+}
+#powerTip.ne:before, #powerTip.se:before {
+	border-right: 10px solid transparent;
+	border-left: 0;
+	left: 10px;
+}
+#powerTip.nw:before, #powerTip.sw:before {
+	border-left: 10px solid transparent;
+	border-right: 0;
+	right: 10px;
+}
+#powerTip.ne:before, #powerTip.nw:before {
+	border-top: 10px solid white;
+	bottom: -10px;
+}
+#powerTip.se:before, #powerTip.sw:before {
+	border-bottom: 10px solid white;
+	top: -10px;
+}
+#powerTip.n:after, #powerTip.s:after {
+	border-right: 11px solid transparent;
+	border-left: 11px solid transparent;
+	left: 20%;
+	margin-left: -11px;
+}
+#powerTip.e:after, #powerTip.w:after {
+	border-bottom: 11px solid transparent;
+	border-top: 11px solid transparent;
+	margin-top: -11px;
+	top: 50%;
+}
+#powerTip.n:after {
+	border-top: 11px solid rgba(0, 0, 0, 0.2);
+	bottom: -11px;
+}
+#powerTip.e:after {
+	border-right: 11px solid rgba(0, 0, 0, 0.2);
+	left: -11px;
+}
+#powerTip.s:after {
+	border-bottom: 11px solid rgba(0, 0, 0, 0.2);
+	top: -11px;
+}
+#powerTip.w:after {
+	border-left: 11px solid rgba(0, 0, 0, 0.2);
+	right: -11px;
+}

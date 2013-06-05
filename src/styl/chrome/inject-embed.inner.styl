@@ -1,0 +1,199 @@
+@import 'nib'
+
+body
+  font-family Verdana
+  font-size 9pt
+  &.hacker-news
+    background-color: #ffeedd;
+    color black
+    .tldr-header
+      color #828282
+    a
+      color #828282
+      &:hover
+        color #828282
+    .thank-container
+      font-size 8pt
+      .btn.btn-link.thank
+        margin-left -12px
+        color #828282
+        font-size 8pt
+        font-family Verdana
+  &.reddit
+    background-color: #d4e3f7;
+    color black
+    .tldr-header
+      color #888
+    a
+      color #888
+      font-weight bold
+      &:hover
+        color #888
+    .thank-container
+      font-size 8pt
+      .btn.btn-link.thank
+        margin-left -12px
+        color #888
+        font-size 8pt
+        font-weight bold
+        font-family Verdana
+  .container-fluid
+    padding 5px 8px 0px 15px
+    overflow hidden
+    &:hover
+      .embed-actions
+        .go-to-settings, .embed-edit
+          opacity 0.2
+        .dismiss-iframe
+          opacity 0.2
+    .tldr-header
+        font-size 8pt
+      .embed-actions
+        .go-to-settings, .embed-edit
+          float right
+          margin-right 5px
+          opacity 0
+        .dismiss-iframe
+          margin-top -3px
+          opacity 0
+    .tldr-read-container
+      ul
+        list-style none
+        margin-left 0px
+        li
+          line-height 15px
+          margin-bottom 8px
+    .edit-bullet-container
+      &.error
+        .character-count
+          color #b94a48
+      &:not(:first-child)
+        margin-top -7px
+      .edit-bullet-wrapper
+        display inline-block
+        width 501px
+        pre
+          line-height 9pt
+        .edit-bullet
+          overflow: hidden; /* remove scrollbar */
+          background-color: white;
+          border: 1px solid;
+          border-radius: 0px;
+          resize: none;
+          font-family: Verdana;
+          font-size: 9pt;
+          line-height 9pt
+      .trash-bullet-icon
+        width 40px
+        height 0px
+        float right
+        position relative
+        top 18px
+        .close
+          position absolute
+          top -12px
+          left 32px
+          font-size 13px
+          line-height 13px
+        .character-count
+          float right
+    .select-topic
+      &.error
+        .tldr-error-msg
+          display inline
+      .tldr-error-msg
+        display none
+      label
+        width auto
+        font-size 11px
+      .controls
+        display inline
+        margin-left 13px
+        select
+          height 22px
+          width 122px
+          padding 0px
+          font-size 11px
+    .edit-control-pre-save-info
+      margin-left 9px
+      margin-bottom 0px
+      .edit-control-save-anonymously
+        font-size 9pt
+        color #828282
+        padding-left 25px
+      .edit-control-login
+        margin-left 7px
+      .edit-control-save
+        background-color buttonface
+        font: -moz-button;
+        -webkit-appearance push-button
+        -moz-appearance button
+
+/* Title
+-------------------------------------------------- */
+#edit-title
+  font-size 20px
+
+/* Bullets
+-------------------------------------------------- */
+textarea, input[type=text]
+  overflow: hidden; /* remove scrollbar */
+  background-color: white;
+  border: 1px solid;
+
+
+.character-count
+  color:#9f9f9f
+  font-size: 10px;
+  line-height: 14px;
+
+
+/* Expanding textareas
+-------------------------------------------------- */
+.expandingArea {
+  position: relative;
+  background: #fff;
+  margin-top: 9pxresult;
+}
+
+.expandingArea > textarea,
+.expandingArea > pre {
+  padding: 3px 0px 0px 3px;
+  background: transparent;
+  /* Make the text soft-wrap */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin-bottom: 0px;
+  font-family Verdana
+  font-size 9pt
+}
+
+.expandingArea > textarea {
+  /* The border-box box model is used to allow
+   * padding whilst still keeping the overall width
+   * at exactly that of the containing element.
+   */
+  box-sizing: content-box;
+  width: 100%;
+  /* This height is used when JS is disabled */
+  height: 100px;
+}
+.expandingArea.active > textarea {
+  /* Hide any scrollbars */
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.expandingArea > pre {
+  display: none;
+}
+.expandingArea.active > pre {
+  display: block;
+  /* Hide the text; just using it for sizing */
+  visibility: hidden;
+}
+
+.login-status > li
+  display: inline;

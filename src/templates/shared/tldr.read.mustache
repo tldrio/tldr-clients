@@ -1,0 +1,49 @@
+<div class="tldr-read-container" data-id="{{_id}}">
+  <div class="tldr-tldr">
+    <div class="tldr-header">
+      <img class="tldr-favicon tldr-favicon-ellipsis" src="http://www.google.com/s2/favicons?domain={{domain.name}}" alt="Favicon for {{domain.name}}">
+      <p class="tldr-title tldr-title-ellipsis">
+        <a href="{{originalUrl}}" target="_blank">{{title}}</a>
+      </p>
+    </div>
+
+    <div class="tldr-metadata">
+      tl;dr
+      {{^anonymous}}
+      <span>
+         by
+          <span><em>{{#creator}} {{>usernameLink}} {{/creator}}</em></span>
+            ·
+      </span>
+      {{/anonymous}}
+
+      {{#lastEditor}}
+        edited by <em>{{>usernameLink}}</em>  ·
+      {{/lastEditor}}
+
+      In
+      {{#categories}}
+       <a href="{{websiteUrl}}/discover/{{name}}" target="_blank" class="category-name"><em>{{name}}</em></a>
+      {{/categories}}
+      ·
+
+      read {{readCount}} times
+    </div>
+
+    <div class="tldr-summary">
+      <ul>
+        {{#summaryBullets}}
+          <li class="tldr-bullet">
+            <i class="icon-stop"></i>
+              {{.}}
+          </li>
+        {{/summaryBullets}}
+      </ul>
+    </div>
+  </div>
+
+  <div class="sub-tldr">
+    <div class="thank-container"></div>
+    <div class="sharing-container"></div>
+  </div>
+</div>

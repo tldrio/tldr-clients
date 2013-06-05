@@ -1,0 +1,19 @@
+<div id="signup-success">
+  <section class="marketing">
+    <h1>Welcome aboard!</h1>
+    <p class="marketing-byline">We're glad to have you!</p>
+    <p>
+      <strong>You're not confirmed yet!</strong>
+      We sent an email to <strong>{{email}}</strong> with a verification link. It might take a few minutes to appear in your inbox,
+      but when it does, please confirm your email address by clicking on the enclosed link.
+     </p>
+     <p>
+       If you can't see it in your inbox, please check your spam folder.
+     </p>
+
+{{#providerName}}
+<a class="btn btn-primary" href="{{providerAddress}}" target="_blank" id="signup-success-mail-provider" >Go check your {{providerName}} inbox now.</a>
+{{/providerName}}
+  </section>
+</div>
+

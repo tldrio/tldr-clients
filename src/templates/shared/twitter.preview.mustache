@@ -1,0 +1,31 @@
+<div class="preview-container {{type}}">
+  <div class="description-container" style="background-image:url({{data.profile_banner_url}});">
+    <div class="row-fluid">
+      <div class="twitter-avatar" style="background-image:url({{data.profile_image_url}});">
+      </div>
+      <div class="twitter-description twitter-text">
+        <span class="twitter-name"> {{data.name}} </span>
+        <span class="twitter-alias"> · @{{data.screen_name}} </span>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="twitter-description twitter-text"> {{data.description}} </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="stats-container">
+      <div class="twitter-stats">
+        <div class="twitter-stats-number"> {{data.statuses_count}} </div>
+        <div class="twitter-stats-description"> tweets </div>
+      </div>
+      <div class="twitter-stats">
+        <div class="twitter-stats-number"> {{data.friends_count}} </div>
+        <div class="twitter-stats-description"> abonnements </div>
+      </div>
+      <div class="twitter-stats">
+        <div class="twitter-stats-number"> {{data.followers_count}} </div>
+        <div class="twitter-stats-description"> followers </div>
+      </div>
+    </div>
+  </div>
+</div>

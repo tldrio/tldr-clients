@@ -1,0 +1,108 @@
+{
+  "name": "Link Preview",
+  "version": "2.7.9",
+  "manifest_version": 2,
+
+  "description": "Save time while browsing the web, focus on what matters, stop opening too many tabs.",
+
+  "icons": { "16": "assets/img/icon16.png",
+             "48": "assets/img/icon48.png",
+            "128": "assets/img/icon128.png" },
+
+
+  "options_page": "settings.html",
+
+  "page_action": {
+    "default_icon": "assets/img/icon38.png",
+    "default_title": "tl;dr batman"
+  },
+
+  "content_scripts":
+  [
+    { "js": ["src/inject-embed.inner.js"]
+    , "matches": ["*://*/iframe*embed*"]
+    , "run_at": "document_start"
+    , "all_frames": true
+    }
+  , { "js": ["src/popover.inner.js"]
+    , "matches": ["*://*/iframe*popover*"]
+    , "run_at": "document_start"
+    , "all_frames": true
+    }
+  , { "js": ["src/overlay.inner.js"]
+    , "matches": ["*://*/iframe*crx*"]
+    , "run_at": "document_start"
+    , "all_frames": true
+    }
+  ],
+
+  "content_security_policy": "script-src 'self' https://cdn.mxpnl.com https://api.mixpanel.com; object-src 'self'",
+  "background": {
+    "scripts": ["src/firstInstall.js", "src/background.js"]
+  },
+
+  "web_accessible_resources": [ "assets/img/glyphicons-halflings.png"
+                              , "assets/img/fc-webicon-facebook-m.png"
+                              , "assets/img/fc-webicon-facebook.png"
+                              , "assets/img/fc-webicon-facebook-s.png"
+                              , "assets/img/fc-webicon-googleplus-m.png"
+                              , "assets/img/fc-webicon-googleplus.png"
+                              , "assets/img/fc-webicon-googleplus-s.png"
+                              , "assets/img/fc-webicon-instapaper.png"
+                              , "assets/img/fc-webicon-instapaper-s.png"
+                              , "assets/img/fc-webicon-linkedin-m.png"
+                              , "assets/img/fc-webicon-linkedin.png"
+                              , "assets/img/fc-webicon-linkedin-s.png"
+                              , "assets/img/fc-webicon-mail-m.png"
+                              , "assets/img/fc-webicon-mail.png"
+                              , "assets/img/fc-webicon-mail-s.png"
+                              , "assets/img/fc-webicon-pocketapp-m.png"
+                              , "assets/img/fc-webicon-pocketapp.png"
+                              , "assets/img/fc-webicon-pocketapp-s.png"
+                              , "assets/img/fc-webicon-quora-m.png"
+                              , "assets/img/fc-webicon-quora.png"
+                              , "assets/img/fc-webicon-quora-s.png"
+                              , "assets/img/fc-webicon-readability.png"
+                              , "assets/img/fc-webicon-rss-m.png"
+                              , "assets/img/fc-webicon-rss.png"
+                              , "assets/img/fc-webicon-rss-s.png"
+                              , "assets/img/fc-webicon-stackoverflow-m.png"
+                              , "assets/img/fc-webicon-stackoverflow.png"
+                              , "assets/img/fc-webicon-stackoverflow-s.png"
+                              , "assets/img/fc-webicon-stumbleupon-m.png"
+                              , "assets/img/fc-webicon-stumbleupon.png"
+                              , "assets/img/fc-webicon-stumbleupon-s.png"
+                              , "assets/img/fc-webicon-tumblr-m.png"
+                              , "assets/img/fc-webicon-tumblr.png"
+                              , "assets/img/fc-webicon-tumblr-s.png"
+                              , "assets/img/fc-webicon-twitter-m.png"
+                              , "assets/img/fc-webicon-twitter.png"
+                              , "assets/img/fc-webicon-twitter-s.png"
+                              , "assets/img/fc-webicon-wordpress-m.png"
+                              , "assets/img/fc-webicon-wordpress.png"
+                              , "assets/img/fc-webicon-wordpress-s.png"
+                              , "assets/img/tldr-missing.png"
+                              , "assets/img/tldr-present.png"
+                              , "assets/img/easter-tldr-page.jpg"
+                              , "assets/img/easter-profile-page.jpg"
+                              , "assets/css/bookmarklet.css"
+                              , "assets/css/bootstrap.css"
+                              , "assets/css/bootstrap.min.css"
+                              , "assets/css/bootstrap-responsive.css"
+                              , "assets/css/bootstrap-responsive.min.css"
+                              , "assets/css/fc-webicons.css"
+                              , "assets/css/settings.css"
+                              , "assets/css/inject-embed.inner.css"
+                              , "assets/css/inject-embed.outer.css"
+                              , "assets/css/overlay.outer.css"
+                              , "assets/css/overlay.inner.css"
+                              , "assets/css/popover.outer.css"
+                              , "assets/css/popover.inner.css"
+                              ],
+
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ]
+}

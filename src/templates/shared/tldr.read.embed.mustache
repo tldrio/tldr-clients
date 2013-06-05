@@ -1,0 +1,23 @@
+<div class="tldr-read-container" data-id="{{_id}}">
+  <div class="tldr-tldr">
+    <span class="tldr-header">
+      <a href="{{pageLink}}" target="_blank" class="tldr-brand">tl;dr</a> of submission <span class="provider">(via <a href="http://tldr.io" target="_blank">tldr.io</a>)</span>
+        <span class="embed-actions">
+          <button type="button" class="close dismiss-iframe">×</button>
+          <a href="#" class="go-to-settings"><i class="icon-wrench"></i></a>
+          <a href="#" class="embed-edit"><i class="icon-pencil"></i></a>
+        </span>
+    </span>
+    <div class="tldr-summary">
+      <ul>
+        {{#summaryBullets}}
+          <li class="tldr-bullet">
+              - {{.}}
+          </li>
+        {{/summaryBullets}}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="thank-container">
+</div>

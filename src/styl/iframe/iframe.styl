@@ -1,0 +1,183 @@
+@import 'nib'
+
+#iframe-container
+  padding 15px
+  &:hover
+    .sub-tldr, .nav-container
+      opacity 1
+
+.first-contrib-funny-message
+  float right
+  background-color #666666
+  background-clip text
+  color transparent
+  text-shadow rgba(255,255,255,0.5) 0px 1px 1px
+  font-style italic
+
+/* Title
+-------------------------------------------------- */
+#edit-title
+  font-size 20px
+  box-sizing content-box
+  padding-top 0px
+  padding-bottom 0px
+
+/* Bullets
+-------------------------------------------------- */
+textarea, input[type=text]
+  overflow: hidden; /* remove scrollbar */
+
+.edit-bullet
+  width 340px
+
+#tldr-edit-form
+  #edit-title
+    font-size 20px
+  .control-group
+    margin-bottom 10px
+  .read-summary-guidelines
+    margin-bottom -8px
+  .edit-bullet-container
+    position relative
+    .trash-bullet-icon
+      position relative
+      top -1px
+      .character-count
+        color:#9f9f9f
+        font-size: 10px;
+        line-height: 14px;
+    .edit-bullet-icon
+      position relative
+      top 14px
+    .edit-bullet-wrapper
+      margin-left -10px
+      textarea, input[type=text]
+        overflow: hidden; /* remove scrollbar */
+  .select-topic
+    &.error
+      .tldr-error-msg
+        display inline
+        margin-left 8px
+        font-size 12px
+    .tldr-error-msg
+      display none
+    label
+      width auto
+      font-size 12px
+      margin-right 15px
+      text-align left
+    .controls
+      margin-left 0px
+      select
+        width 150px
+        height 23px
+        line-height 23px
+        margin-top 3px
+        padding 2px 0px 0px 0px
+        font-size 12px
+  .edit-control-save-anonymously
+    float right
+    font-size 13px
+    width 113px
+  .edit-control-pre-save-info
+    margin-top 25px
+    margin-bottom 0px
+    font-size 12px
+
+
+
+
+
+
+/* Expanding textareas
+-------------------------------------------------- */
+.expandingArea {
+  position: relative;
+  background: #fff;
+  margin-top: 9px;
+}
+
+.expandingArea > textarea,
+.expandingArea > pre {
+  padding: 5px;
+  background: transparent;
+  /* Make the text soft-wrap */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin-bottom: 0px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.expandingArea > textarea {
+  /* The border-box box model is used to allow
+   * padding whilst still keeping the overall width
+   * at exactly that of the containing element.
+   */
+  box-sizing: border-box;
+  width: 100%;
+  /* This height is used when JS is disabled */
+  height: 100px;
+}
+.expandingArea.active > textarea {
+  /* Hide any scrollbars */
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  /* Remove WebKit user-resize widget */
+  resize: none;
+}
+.expandingArea > pre {
+  display: none;
+}
+.expandingArea.active > pre {
+  display: block;
+  /* Hide the text; just using it for sizing */
+  visibility: hidden;
+}
+
+
+/* Errors
+-------------------------------------------------- */
+.control-group > .tldr-error-msg
+  display none
+
+.control-group.error > .help-inline.tldr-error-msg
+  display inline
+
+.control-group.error > .help-block.tldr-error-msg
+  display inline-block
+
+/* Main
+-------------------------------------------------- */
+.no-tldr-yet-main
+  text-align: center
+
+/* Nav
+-------------------------------------------------- */
+.nav-container
+  opacity 0
+  ul
+    margin-right 0
+    min-width 0
+    li
+      list-style none
+      display inline-block
+      margin-right 3px
+
+/* Signup
+-------------------------------------------------- */
+.marketing
+  text-align center
+
+
+// charles' css
+.tldr-error-message, .tldr-validation-error > .tldr-error-msg
+  display: inline-block;
+  color:#ff0f24;
+  margin-top: 7px;
+
+.login-status > li
+  display: inline;

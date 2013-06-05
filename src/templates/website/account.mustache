@@ -1,0 +1,219 @@
+
+{{#justConfirmedEmail}}
+<div class="alert alert-success" id="account-validation-status">
+  Thank you, you successfully confirmed your email address!
+  <button class="close" data-dismiss="alert">×</button>
+</div>
+{{/justConfirmedEmail}}
+
+
+{{^confirmedEmail}}
+<div class="alert alert-info" id="account-validation-status">
+  You email address is not yet validated. Please click on the link in the confirmation email you received or
+  <a href="#" id="account-resend-token">resend confirmation</a>
+  <button class="close" data-dismiss="alert">×</button>
+</div>
+{{/confirmedEmail}}
+
+<ul class="nav nav-tabs">
+  <li {{#tab.profile}}class="active"{{/tab.profile}}><a href="#account-change-profile" data-toggle="tab">Profile</a></li>
+  <li {{#tab.password}}class="active"{{/tab.password}}><a href="#account-change-password" data-toggle="tab">Password</a></li>
+  <li {{#tab.avatar}}class="active"{{/tab.avatar}}><a href="#account-change-avatar" data-toggle="tab">Avatar</a></li>
+  <li {{#tab.notif}}class="active"{{/tab.notif}}><a href="#account-change-notif" data-toggle="tab">Email Notification Settings</a></li>
+  <li {{#tab.delete}}class="active"{{/tab.delete}}><a href="#account-delete" data-toggle="tab">Delete Account</a></li>
+</ul>
+
+
+<div class="tab-content">
+
+  <!-- General profile information -->
+  <div class="tab-pane {{#tab.profile}}active{{/tab.profile}}" id="account-change-profile">
+    <legend>Profile</legend>
+    <form class="form-horizontal">
+      <fieldset>
+
+        {{>flash}}
+
+        <div class="control-group">
+          <label class="control-label" for="account-form-username">Username</label>
+          <div class="controls">
+            <input type="text" class="input-medium" name="username" value="{{username}}" id="account-form-username">
+            <span class="help-block">An awesome username gives your more street cred</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="account-form-email">Email Address</label>
+          <div class="controls">
+            <input type="text" class="input-xlarge" name="email" value="{{email}}" id="account-form-email">
+            <span class="help-block">We'll never share it with anyone</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="account-form-twitterHandle">Twitter handle</label>
+          <div class="controls">
+            <div class="input-prepend">
+              <span class="add-on">@</span><input type="text" class="input-medium" name="twitterHandle" value="{{twitterHandle}}" id="account-form-twitterHandle">
+            </div>
+            <span class="help-block">Leave empty if you don't want the world to know you create awesome tl;drs</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="account-form-bio">Bio</label>
+          <div class="controls">
+            <textarea rows="4" cols="30" name="bio" id="account-form-bio">{{bio}}</textarea>
+            <span class="help-block">Can you tell the world all about you in less than 500 characters?</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <div class="controls">
+            <input type="submit" value="Save Modifications" class="btn btn-primary" id="account-submit-new-profile">
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+
+  <!-- Password update -->
+  <div class="tab-pane {{#tab.password}}active{{/tab.password}}" id="account-change-password">
+    <legend>Password</legend>
+    <form class="form-horizontal">
+      <fieldset>
+
+        {{>flash}}
+
+        <div class="control-group">
+          <label class="control-label" for="account-form-old-pwd">Current password</label>
+          <div class="controls">
+            <input type="password" class="input-xlarge" name="oldPassword" id="account-form-old-pwd">
+            <span class="help-inline"></span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="account-form-new-pwd">New password</label>
+          <div class="controls">
+            <input type="password" class="input-xlarge" name="newPassword" id="account-form-new-pwd">
+            <span class="help-inline"></span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="account-form-confirm-pwd">Confirm New password</label>
+          <div class="controls">
+            <input type="password" class="input-xlarge" name="confirmPassword" id="account-form-confirm-pwd">
+            <span class="help-inline"></span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <div class="controls">
+            <input type="submit" value="Update Password" class="btn btn-primary" id="account-submit-new-password">
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+
+  <!-- Avatar update -->
+  <div class="tab-pane {{#tab.avatar}}active{{/tab.avatar}}" id="account-change-avatar">
+    <legend>Avatar</legend>
+    <img src="{{gravatar.url}}&s=130" class="img-polaroid current-gravatar" alt="{{username}}">
+    <br><br>
+
+    <a href="http://gravatar.com" target="_blank"><strong>You can create or change your Gravatar at Gravatar.com</strong></a><br><br>
+    {{>flash}}
+    <form class="form-inline">
+      <label class="control-label" for="new-gravatar-email">Gravatar email (empty means no Gravatar): </label>
+      <input type="text" class="input-large" name="newGravatarEmail" id="new-gravatar-email" value="{{gravatar.email}}">
+      <input type="submit" value="Update Gravatar email" class="btn btn-primary" id="submit-new-gravatar-email">
+    </form>
+    <br>
+  </div>
+
+  <div class="tab-pane {{#tab.notif}}active{{/tab.notif}}" id="account-change-notif">
+    <legend>Email Notification Settings</legend>
+    <form class="form-horizontal">
+      <fieldset>
+
+        {{>flash}}
+
+        <div class="control-group">
+          <label class="label-notification" for="account-notif-tldrread">Email me a weekly report on the impact of my tl;drs</label>
+          <div class="controls">
+            <input id="account-notif-tldrread" type="checkbox" value="value1" {{#notificationsSettings.read}}checked="checked"{{/notificationsSettings.read}}>
+          </div>
+        </div>
+
+
+        <div class="control-group">
+          <label class="label-notification" for="account-notif-congratsTldrViews">Email me when one of my tl;drs becomes a hit</label>
+          <div class="controls">
+            <input id="account-notif-congratsTldrViews" type="checkbox" value="value1" {{#notificationsSettings.congratsTldrViews}}checked="checked"{{/notificationsSettings.congratsTldrViews}}>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="label-notification" for="account-notif-tldrnewsletter">Email me weekly awesome tl;drs I could have missed</label>
+          <div class="controls">
+            <input id="account-notif-tldrnewsletter" type="checkbox" value="value1" {{#notificationsSettings.newsletter}}checked="checked"{{/notificationsSettings.newsletter}}>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="label-notification" for="account-notif-postForum">Email me when somebody comments on a thread I'm participating in</label>
+          <div class="controls">
+            <input id="account-notif-postForum" type="checkbox" value="value1" {{#notificationsSettings.postForum}}checked="checked"{{/notificationsSettings.postForum}}>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="label-notification" for="account-notif-thank">Email me when somebody thanks me for a tl;dr I wrote</label>
+          <div class="controls">
+            <input id="account-notif-thank" type="checkbox" value="value1" {{#notificationsSettings.thank}}checked="checked"{{/notificationsSettings.thank}}>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="label-notification" for="account-notif-edit">Email me when someone edits one of my tldr</label>
+          <div class="controls">
+            <input id="account-notif-edit" type="checkbox" value="value1" {{#notificationsSettings.edit}}checked="checked"{{/notificationsSettings.edit}}>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="label-notification" for="account-notif-service-updates">Email me feature updates</label>
+          <div class="controls">
+            <input id="account-notif-service-updates" type="checkbox" value="value1" {{#notificationsSettings.serviceUpdates}}checked="checked"{{/notificationsSettings.serviceUpdates}}>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <div class="controls">
+            <input type="submit" value="Save Preferences" class="btn btn-primary" id="account-submit-new-notif-settings">
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+
+  <!-- Account deletion -->
+  <div class="tab-pane {{#tab.deletion}}active{{/tab.deletion}}" id="account-delete">
+    <legend>Delete Account</legend>
+      We're sorry to see you go. Could you explain why you're leaving?<br><br>
+      <textarea id="account-delete-reason" placeholder="I'm leaving because:"></textarea><br><br>
+      <input type="button" value="Delete my account" class="btn btn-danger" id="account-delete-button">
+  </div>
+
+
+
+</div>
+
+
+

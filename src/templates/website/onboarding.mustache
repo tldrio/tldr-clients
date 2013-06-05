@@ -1,0 +1,49 @@
+<div id="onboarding-overlay">
+  <div id="onboarding-wrapper">
+    <div id="onboarding-content">
+      <div class="row-fluid">
+        <div class="span12">
+
+          {{#screen.0}}
+            <h4 class="tldr-title">{{title}}</h4>
+            <ul>
+              {{#summaryBullets}}
+                <li class="tldr-bullet">
+                  <i class="icon-stop"></i>
+                    {{{.}}}
+                </li>
+              {{/summaryBullets}}
+            </ul>
+
+            <div id="onboarding-show-me-how" >
+              <button type="button" class="btn btn-large btn-primary onboarding-show-next">Show me how</button>
+            </div>
+          {{/screen.0}}
+
+          {{#screen.1}}
+            <h4 class="tldr-title">{{title}}</h4>
+            <div class="install-bm-container"> </div>
+          {{/screen.1}}
+
+          {{#screen.2}}
+            <div class="signup-container"> </div>
+          {{/screen.2}}
+
+          <div class="onboarding-numbering">
+            {{^screen.first}}
+            <a href="#" class="onboarding-show-prev"><i class="icon-arrow-left"></i></a>
+            {{/screen.first}}
+            {{screen.value}}/{{screen.total}}
+            {{^screen.last}}
+            <a href="#" class="onboarding-show-next"><i class="icon-arrow-right"></i></a>
+            {{/screen.last}}
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div id="onboarding-close">
+      <button id="onboarding-close-btn"></button>
+    </div>
+  </div>
+</div>

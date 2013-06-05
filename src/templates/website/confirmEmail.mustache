@@ -1,0 +1,34 @@
+<section class="marketing">
+
+{{#validationError}}
+  <h1>Confirmation problem</h1>
+<p class="marketing-byline">Oops! something, somewhere, went wrong :(</p>
+<p>
+  We are sorry but we couldn't confirm your email address.
+  You can retry or request a new confirmation token in your <a href="/account">account</a>.
+  If you already have requested a new one, please click the link in the latest email, the previous ones are expired.
+</p>
+{{/validationError}}
+
+{{#validationSuccess}}
+  <h1>You're in!</h1>
+<p class="marketing-byline">Done with the paperwork</p>
+<p>
+  Your email is confirmed! You now have all the power in your hands to <strong>make the web more accessible</strong>.
+</p>
+<p>
+  The web has become a thick jungle where it’s tough to find one’s way to the right content.
+  There are a lot of hidden treasures that we would like to put in everybody’s hands.
+  We think that there is <strong>something missing from the web</strong>, a tool that helps people find these treasures and overcome the information overload.
+  <strong>
+    Filling this gap is our mission and you’re a part of it.
+  </strong>
+</p>
+
+<p>
+  Read, share and contribute tl;drs to help <strong>spread the content you find inspiring and interesting</strong>.
+</p>
+<a class="btn btn-primary" href="/discover"  >I want to read some tl;drs</a>
+{{/validationSuccess}}
+
+</section>

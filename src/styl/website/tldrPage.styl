@@ -1,0 +1,30 @@
+@import 'nib'
+
+.page-tldr-container
+  margin-right auto
+  margin-left auto
+  .tldr-title
+    margin-bottom 0
+  .category-name:not(:last-child):after
+    content ","
+  .sub-tldr
+    .cta-login
+      display none
+      a
+        color #c09853
+
+.page-help
+  text-align center
+  margin-top 30px
+  .help-inline
+    font-size 16px
+
+@media (max-width: 767px)
+  body
+    padding-left 0px !important;
+    padding-right 0px !important;
+  .tldr-tldr
+    padding-left 0px !important;
+  .tldr-image
+    float none !important;
+

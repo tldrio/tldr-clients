@@ -201,7 +201,8 @@ function
           analytics();
           break;
         }
-
+	// run analytics for all urls # TODO improve this
+	analytics();
         // Default: a public user profile
         colorIcons(14);
         attachPowertips({ from: 'User public profile' });

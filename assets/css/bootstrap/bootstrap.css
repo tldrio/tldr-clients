@@ -3786,6 +3786,14 @@ input[type="submit"].btn.btn-mini {
   background-color: #eeeeee;
 }
 
+.nav > .search-input {
+    position:relative;
+    display: inline-block;
+    padding-top: 6px;
+    padding-left:10px;
+    float: left !important;
+}
+
 .nav > .pull-right {
   float: right;
 }
